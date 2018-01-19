@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{370654C7-86A4-42FC-86EC-64BF22DDD6A2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>libpixy.net</RootNamespace>
+    <AssemblyName>libpixy.net</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animation\Animations.cs" />
+    <Compile Include="Animation\FCurve.cs" />
+    <Compile Include="Animation\FCurveKey.cs" />
+    <Compile Include="Attribute\Attribute.cs" />
+    <Compile Include="Attribute\AttributeBoolean.cs" />
+    <Compile Include="Attribute\AttributeColor4.cs" />
+    <Compile Include="Attribute\AttributeFloat.cs" />
+    <Compile Include="Attribute\AttributeInteger.cs" />
+    <Compile Include="Attribute\AttributeMatrix.cs" />
+    <Compile Include="Controls\ColorPickerButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ColorPickerButton.Designer.cs">
+      <DependentUpon>ColorPickerButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\BitmapButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Standard\BitmapButton.designer.cs">
+      <DependentUpon>BitmapButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\Image9Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Standard\PictureBoxButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ToolStripSpringComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\BaseObject.cs" />
+    <Compile Include="Attribute\Attributes.cs" />
+    <Compile Include="Attribute\AttributeString.cs" />
+    <Compile Include="Attribute\AttributeVector3.cs" />
+    <Compile Include="Controls\FrameButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FrameButton.Designer.cs">
+      <DependentUpon>FrameButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BitmapTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CurveEditor\Constants.cs" />
+    <Compile Include="Controls\CurveEditor\ControlPoint.cs" />
+    <Compile Include="Controls\CurveEditor\Curve.cs" />
+    <Compile Include="Controls\CurveEditor\CurveBuilder.cs" />
+    <Compile Include="Controls\CurveEditor\CurveEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CurveEditor\CurveEditor.Designer.cs">
+      <DependentUpon>CurveEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CurveEditor\Document.cs" />
+    <Compile Include="Controls\CurveEditor\EditableObject.cs" />
+    <Compile Include="Controls\CurveEditor\Gfx.cs" />
+    <Compile Include="Controls\CurveEditor\HandlePoint.cs" />
+    <Compile Include="Controls\CurveEditor\MouseDrag.cs" />
+    <Compile Include="Controls\CurveEditor\Renderer.cs" />
+    <Compile Include="Controls\CustomListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomListView.designer.cs">
+      <DependentUpon>CustomListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Diagram\Canvas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Diagram\Canvas.designer.cs">
+      <DependentUpon>Canvas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Diagram\Controller.cs" />
+    <Compile Include="Controls\Diagram\Document.cs" />
+    <Compile Include="Controls\Diagram\Draw.cs" />
+    <Compile Include="Controls\Diagram\DrawContext.cs" />
+    <Compile Include="Controls\Diagram\DrawCurvedConnection.cs" />
+    <Compile Include="Controls\Diagram\DrawLineConnection.cs" />
+    <Compile Include="Controls\Diagram\IDrawConnection.cs" />
+    <Compile Include="Controls\Diagram\Link.cs" />
+    <Compile Include="Controls\Diagram\Node.cs" />
+    <Compile Include="Controls\Diagram\Port.cs" />
+    <Compile Include="Controls\Diagram\Serializer.cs" />
+    <Compile Include="Controls\DoubleBufferedListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DoubleBufferedListView.Designer.cs">
+      <DependentUpon>DoubleBufferedListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EdgePanel\EdgePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EdgePanel\EdgePanelContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ExpandingPanel\ExpandingPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ExpandingPanel\ExpandingPanelContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatComboBox.designer.cs">
+      <DependentUpon>FlatComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImageStretchPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ImageLinkButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ImageLinkButton.Designer.cs">
+      <DependentUpon>ImageLinkButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImageStretchTools.cs" />
+    <Compile Include="Controls\Ruler\Ruler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Slider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Slider.Designer.cs">
+      <DependentUpon>Slider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Timeline\TimelineHeader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Timeline\TimelineContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Timeline\TimelineItem.cs">
+    </Compile>
+    <Compile Include="Controls\Timeline\TimelineLane.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ToolboxPanel\ToolboxButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ToolboxPanel\ToolboxContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ToolboxPanel\ToolboxGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ToolStripSpringTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Tools\Canvas.cs" />
+    <Compile Include="Controls\Tools\Mouse.cs" />
+    <Compile Include="Controls\Tools\MouseDrag.cs" />
+    <Compile Include="Controls\Tools\MouseSelection.cs" />
+    <Compile Include="Controls\TreeListPanel\TreeListContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeListPanel\TreeListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ImageStretchButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ImageStretchButton.Designer.cs">
+      <DependentUpon>ImageStretchButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Utils\DrawUtils.cs" />
+    <Compile Include="Exif\Exif.cs" />
+    <Compile Include="Exif\ExifUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shell\ShellAPI.cs" />
+    <Compile Include="Shell\IAdviseSink.cs" />
+    <Compile Include="Shell\IContextMenu.cs" />
+    <Compile Include="Shell\IDataObject.cs" />
+    <Compile Include="Shell\IDragSourceHelper.cs" />
+    <Compile Include="Shell\IDropSource.cs" />
+    <Compile Include="Shell\IDropTarget.cs" />
+    <Compile Include="Shell\IDropTargetHelper.cs" />
+    <Compile Include="Shell\IEnumFORMATETC.cs" />
+    <Compile Include="Shell\IEnumIDList.cs" />
+    <Compile Include="Shell\IEnumSTATSTG.cs" />
+    <Compile Include="Shell\IQueryInfo.cs" />
+    <Compile Include="Shell\IShellExtInit.cs" />
+    <Compile Include="Shell\IShellFolder.cs" />
+    <Compile Include="Shell\IStorage.cs" />
+    <Compile Include="Shell\IStream.cs" />
+    <Compile Include="Shell\PIDL.cs" />
+    <Compile Include="Shell\ShellBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shell\ShellFolderTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Shell\ShellFolderTree.Designer.cs">
+      <DependentUpon>ShellFolderTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shell\ShellHelper.cs" />
+    <Compile Include="Shell\ShellImageList.cs" />
+    <Compile Include="Shell\ShellItem.cs" />
+    <Compile Include="Shell\ShellStreamReader.cs" />
+    <Compile Include="Tools\DebugParam.cs" />
+    <Compile Include="Tools\DebugParamServer.cs" />
+    <Compile Include="Tools\Draw.cs" />
+    <Compile Include="Tools\ImageListConverter.cs" />
+    <Compile Include="Tools\PUID.cs" />
+    <Compile Include="Tools\ScopeName.cs" />
+    <Compile Include="Tools\ScopeSelector.cs" />
+    <Compile Include="Tools\Selector.cs" />
+    <Compile Include="Tools\Barrier.cs" />
+    <Compile Include="Tools\BaseDisposable.cs" />
+    <Compile Include="Tools\BaseFinalize.cs" />
+    <Compile Include="Tools\Command.cs" />
+    <Compile Include="Tools\CommandRunner.cs" />
+    <Compile Include="Tools\DebugPrinter.cs" />
+    <Compile Include="Tools\EventArgs.cs" />
+    <Compile Include="Tools\EventManager.cs" />
+    <Compile Include="Tools\KeyMap.cs" />
+    <Compile Include="Tools\KeyStroke.cs" />
+    <Compile Include="Tools\MRU.cs" />
+    <Compile Include="Tools\Random.cs" />
+    <Compile Include="Tools\Range.cs" />
+    <Compile Include="Tools\SelectorUtils.cs" />
+    <Compile Include="Tools\Wildcard.cs" />
+    <Compile Include="Tools\Trace.cs" />
+    <Compile Include="Tools\UUID.cs" />
+    <Compile Include="Utils\ArrayUtils.cs" />
+    <Compile Include="Utils\BitsUtils.cs" />
+    <Compile Include="Utils\ColorUtils.cs" />
+    <Compile Include="Utils\FileUtils.cs" />
+    <Compile Include="Utils\GeomUtils.cs" />
+    <Compile Include="Tools\IDManager.cs" />
+    <Compile Include="Utils\MathUtils.cs" />
+    <Compile Include="Tools\PatternMatch.cs" />
+    <Compile Include="Tools\Ref.cs" />
+    <Compile Include="Utils\InvokeUtils.cs" />
+    <Compile Include="Utils\KeyUtils.cs" />
+    <Compile Include="Utils\MsgBoxUtils.cs" />
+    <Compile Include="Utils\ProcessUtils.cs" />
+    <Compile Include="Utils\StringUtils.cs" />
+    <Compile Include="Vecmath\Bezeir.cs" />
+    <Compile Include="Vecmath\Billboard.cs" />
+    <Compile Include="Vecmath\BSpline.cs" />
+    <Compile Include="Vecmath\CatmullRom.cs" />
+    <Compile Include="Vecmath\Color3.cs" />
+    <Compile Include="Vecmath\Color4.cs" />
+    <Compile Include="Vecmath\ColorSpace.cs" />
+    <Compile Include="Vecmath\ColorStack.cs" />
+    <Compile Include="Vecmath\Vecmath.cs" />
+    <Compile Include="Vecmath\EulerAngles.cs" />
+    <Compile Include="Vecmath\Geom.cs" />
+    <Compile Include="Vecmath\Hermite.cs" />
+    <Compile Include="Vecmath\Matrix2.cs" />
+    <Compile Include="Vecmath\Matrix3.cs" />
+    <Compile Include="Vecmath\Matrix4.cs" />
+    <Compile Include="Vecmath\MatrixStack.cs" />
+    <Compile Include="Vecmath\Quaternion.cs" />
+    <Compile Include="Vecmath\RotationMatrix.cs" />
+    <Compile Include="Vecmath\VecmathUtils.cs" />
+    <Compile Include="Vecmath\Vector2.cs" />
+    <Compile Include="Vecmath\Vector3.cs" />
+    <Compile Include="Vecmath\Vector4.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\FrameButton.resx">
+      <DependentUpon>FrameButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CurveEditor\CurveEditor.resx">
+      <DependentUpon>CurveEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CustomListView.resx">
+      <DependentUpon>CustomListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Diagram\Canvas.resx">
+      <DependentUpon>Canvas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EdgePanel\EdgePanel.resx">
+      <DependentUpon>EdgePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ExpandingPanel\ExpandingPanel.resx">
+      <DependentUpon>ExpandingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FlatComboBox.resx">
+      <DependentUpon>FlatComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Slider.resx">
+      <DependentUpon>Slider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ColorPickerButton.resx">
+      <DependentUpon>ColorPickerButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Standard\BitmapButton.resx">
+      <DependentUpon>BitmapButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shell\ShellFolderTree.resx">
+      <DependentUpon>ShellFolderTree.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

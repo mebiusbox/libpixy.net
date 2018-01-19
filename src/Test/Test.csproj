@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{985774C2-3BA1-4E2C-99F7-A1FB689F958A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdobeColorPicker">
+      <HintPath>3rdparty\AdobeColorPicker.dll</HintPath>
+    </Reference>
+    <Reference Include="GlassButton">
+      <HintPath>3rdparty\GlassButton.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>packages\NLog.4.4.12\lib\net40\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ColorPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ColorPanel.Designer.cs">
+      <DependentUpon>ColorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ColorPanelController.cs" />
+    <Compile Include="Controls\IParameter.cs" />
+    <Compile Include="Controls\Parameter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Parameter.Designer.cs">
+      <DependentUpon>Parameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ParameterBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ParameterBase.Designer.cs">
+      <DependentUpon>ParameterBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ParameterChangedEventArgs.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Node.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\AnimationWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\AnimationWindow.designer.cs">
+      <DependentUpon>AnimationWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NodeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\NodeEditor.Designer.cs">
+      <DependentUpon>NodeEditor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\ColorPanel.resx">
+      <DependentUpon>ColorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Parameter.resx">
+      <DependentUpon>Parameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ParameterBase.resx">
+      <DependentUpon>ParameterBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Windows\AnimationWindow.resx">
+      <DependentUpon>AnimationWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\NodeEditor.resx">
+      <DependentUpon>NodeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NLog.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラ 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_pressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_switch_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_null.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libpixy.net\libpixy.net.csproj">
+      <Project>{370654c7-86a4-42fc-86ec-64bf22ddd6a2}</Project>
+      <Name>libpixy.net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bordered_textbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bordered_textbox_changed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock_link_mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combobox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combobox_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_frame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_circle_double.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-return-180-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\draw_wave.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
